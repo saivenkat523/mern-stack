@@ -2,10 +2,7 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 5010;
 
-app.get("/", function(req, res){
-	//res.send("Iam siavenkat");
-	res.sendFile(__dirname+"/1.html");
-});
+
 app.get("/", function(req, res){
 	//res.send("Iam siavenkat");
 	res.sendFile(__dirname+"/resume.html");
