@@ -4,6 +4,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 const port = process.env.PORT || 5010;
+const options = {
+    extensions: ['htm', 'html','css','js','ico','jpg','jpeg','png','svg'],
+    index: ['index.html'],  
+}
+app.use(express.static("public", options));
 
 app.use(express.static(__dirname + '/public'));
 
