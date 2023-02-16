@@ -43,7 +43,7 @@ module.exports.updateUser = async function(username,data,callback){
         };
         var result = await userModel.updateOne(query,data);
         callback(null,result);
-
+        
     }
     catch(err){
         callback(err,null);
