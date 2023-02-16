@@ -18,7 +18,7 @@ app.get('/', function(req, res) {
 app.get('/', function(req, res) {
     res.sendFile(__dirname + '/1.html');
 });
-app.get('/', function(req, res) {
+app.get('/resume', function(req, res) {
     res.sendFile(__dirname + '/resume.html');
 });
 mongoose.set('strictQuery', true);
