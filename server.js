@@ -12,10 +12,10 @@ app.use(express.static("public", options));
 
 // app.use(express.static(__dirname + '/public'));
 
-app.get('/', function(req, res) {
+app.get('/card', function(req, res) {
     res.sendFile(__dirname + '/card.html');
 });
-app.get('/', function(req, res) {
+app.get('/1', function(req, res) {
     res.sendFile(__dirname + '/1.html');
 });
 app.get('/resume', function(req, res) {
