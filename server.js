@@ -13,11 +13,7 @@ app.use(express.static("public", options));
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res) {
-    res.sendFile(__dirname + '/index.html');
-});
-
-app.get('/resume', function(req, res) {
-    res.sendFile(__dirname + '/resume.html');
+    res.sendFile(__dirname + '/card.html');
 });
 mongoose.set('strictQuery', true);
 mongoose.connect(process.env.MONGO_CONNECTION_STRING, {}, function(err) {
