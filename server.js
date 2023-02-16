@@ -28,14 +28,14 @@ mongoose.connect(process.env.MONGO_CONNECTION_STRING, {}, function(err) {
     } else {
         console.log('Connected to database');
         // TODO : donot create a user if atleast 1 user exist in the table
-          // userLib.createFirstUser(function(err,result){
-		// 	if(err){
-		// 		// console.error(err);
-		// 	}
-		// 	else{
-		// 		console.log(result);
-		// 	}
-		// });
+        //    userLib.createFirstUser(function(err,result){
+		//  	if(err){
+		//  		// console.error(err);
+		//  	}
+		//  	else{
+		//  		console.log(result);
+		//  	}
+		//  });
 		// userLib.createUser({userName: "beingzero", yearOfGraduation: 2025},function(err,result){
 		// 	if(err){
 		// 		console.error(err);
@@ -60,22 +60,22 @@ mongoose.connect(process.env.MONGO_CONNECTION_STRING, {}, function(err) {
 				console.log(result);
 			}
 		});*/
-		  userLib.getUserByFilter({userName: "saivenkat"}, function(err,result){
-			if(err){
+		//   userLib.getUserByFilter({userName: "saivenkat"}, function(err,result){
+		// 	if(err){
+		//  		console.error(err);
+		// 	}
+		//  	else{
+		// 		console.log(result);
+		// 	}
+		//  });
+		 userLib.getAllUsers(function(err,result){
+		 	if(err){
 		 		console.error(err);
-			}
+		 	}
 		 	else{
-				console.log(result);
-			}
+		 		console.log(result);
+		 	}
 		 });
-		// // userLib.getAllUsers(function(err,result){
-		// // 	if(err){
-		// // 		console.error(err);
-		// // 	}
-		// // 	else{
-		// // 		console.log(result);
-		// // 	}
-		// // });
 
 		app.listen(port, function(){
 			console.log("Server running on http://localhost:"+port);
