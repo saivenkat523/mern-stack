@@ -8,7 +8,7 @@ const options = {
     extensions: ['htm', 'html','css','js','ico','jpg','jpeg','png','svg'],
     index: ['index.html'],  
 }
-app.use(express.static("images", options));
+app.use(express.static("public", options));
 
 // app.use(express.static(__dirname + '/public'));
 
