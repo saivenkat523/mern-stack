@@ -9,16 +9,16 @@ const options = {
 	index:['index.html'],
 }
 app.use(express.static("public",options));
-app.get("/", function(req, res){
-	res.sendFile(__dirname+"/index.html");
+app.get("/card", function(req, res){
+	res.sendFile(__dirname+"/card.html");
 });
 
 app.get("/resume", function(req, res){
 	res.sendFile(__dirname+"/resume.html");
 });
 
-app.get("/card", function(req, res){
-	res.sendFile(__dirname+"/card.html");
+app.get("/1", function(req, res){
+	res.sendFile(__dirname+"/1.html");
 });
 app.get("/weather", function(req, res){
 	res.sendFile(__dirname+"/weather.html");
