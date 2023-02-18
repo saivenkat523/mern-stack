@@ -44,13 +44,13 @@
                 <h4 id="city">Delhi</h4>
                 <h6 id="date">Fri Feb 17 2023</h6>
             </div>
-            <img id="cardImage" class="card-img-top " src="public/clear.jpg" alt="Card image cap ">
+            <img id="cardImage" class="card-img-top " src="public/images/clear.jpg" alt="Card image cap ">
 
             <div class="card-body ">
-                <h6 id="temp" class="display-4 font-weight-bold text-center ">27 °C</h6>
-                <h6 id="feelLike" class="display-6 fon-weight-bold text-center "> ( Feels Like 27 °C ) </h6>
+                <h6 id="temp" class="display-4 font-weight-bold text-center ">27 C</h6>
+                <h6 id="feelLike" class="display-6 fon-weight-bold text-center "> ( Feels Like 27 C ) </h6>
                 <h6 id="weather" class="display-7 text-center ">Haze</h6>
-                <h5 id="minMaxTemp" class="display-7 text-center ">25 °C (min) / 26 °C (max)</h5>
+                <h5 id="minMaxTemp" class="display-7 text-center ">25 C (min) / 26 C (max)</h5>
             </div>
             <div class="accordion" id="accordionExample">
                 <div class="accordion-item">
@@ -143,38 +143,38 @@
         function manageImage(weatherType) {
             if (weatherType === 'Clear') {
 
-                return "public/clear.jpg"
+                return "public/images/clear.jpg"
 
             } else if (weatherType === 'Smoke') {
 
-                return "public/smoke.jpg"
+                return "public/images/smoke.jpg"
 
             } else if (weatherType === 'Haze') {
 
-                return "public/haze.jpg"
+                return "public/images/haze.jpg"
 
             } else if (weatherType === 'Rain') {
 
-                return "public/rain.jpg"
+                return "public/images/rain.jpg"
 
             } else if (weatherType === 'Snow') {
 
-                return "public/snow.jpg"
+                return "public/images/snow.jpg"
 
             } else if (weatherType === 'Thunderstorm') {
 
-                return "public/thunderstorm.jpg"
+                return "public/images/thunderstorm.jpg"
 
             } else if (weatherType === "Mist") {
 
-                return "public/mist.jpg"
+                return "public/images/mist.jpg"
 
             } else if (weatherType === "Clouds") {
 
-                return "public/clouds.jpg"
+                return "public/images/clouds.jpg"
 
             } else {
-                return "public/clear.jpg"
+                return "public/images/clear.jpg"
             }
         }
 
@@ -183,9 +183,9 @@
             currentDate.innerHTML = new Date().toDateString();
 
             weather.innerHTML = cityDetails.weather[0].main;
-            feelLike.innerHTML = ` ( Feels Like ${Math.round(cityDetails.main.feels_like)} °C ) `;
-            temp.innerHTML = `${Math.round(cityDetails.main.temp)} °C`;
-            minMaxTemp.innerHTML = `${Math.round(cityDetails.main.temp_min)} °C (min) / ${Math.round(cityDetails.main.temp_max)} C (max)`;
+            feelLike.innerHTML = ` ( Feels Like ${Math.round(cityDetails.main.feels_like)} C ) `;
+            temp.innerHTML = `${Math.round(cityDetails.main.temp)} C`;
+            minMaxTemp.innerHTML = `${Math.round(cityDetails.main.temp_min)} C (min) / ${Math.round(cityDetails.main.temp_max)} C (max)`;
 
             humidity.innerHTML = `<span>Humidity</span> ${cityDetails.main.humidity}`;
             pressure.innerHTML = `<span>Pressure</span> ${cityDetails.main.pressure}`;
