@@ -64,7 +64,7 @@ app.delete(("/api/todos/:todoid"),function(req,res){
 });
 
 app.get("/resume", function(req, res){
-	res.sendFile(__dirname+"/resume");
+	res.sendFile(__dirname+"/resume.html");
 });
 
 app.get("/1", function(req, res){
