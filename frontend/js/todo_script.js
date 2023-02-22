@@ -92,7 +92,6 @@ async function getAllDeletedTodos() {
     }
 }
 // getAllDeletedTodos();
-
 async function getAllTodos(){
     try{
         const todoresult = await fetch("/api/todos");

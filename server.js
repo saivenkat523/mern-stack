@@ -75,7 +75,7 @@ app.get("/card", function(req, res){
 	res.sendFile(__dirname+"/card.html");
 });
 app.get("/weather", function(req, res){
-	res.sendFile(__dirname+"/weather.html");
+	res.sendFile(__dirname+"/frontend/html/weather.html");
 });
 // app.get("/todolist", function(req, res){
 // 	res.sendFile(__dirname+"/frontend/html/todolist.html");

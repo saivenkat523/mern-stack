@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha1/css/bootstrap.min.css" integrity="sha512-72OVeAaPeV8n3BdZj7hOkaPSEk/uwpDkaGyP4W2jSzAC8tfiO4LMEDWoL3uFp5mcZu+8Eehb4GhZWFwvrss69Q==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="/css/weather_style.css">
+    <title>Weather</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<body>
+    <div id = "cont" class="container main-container">
+        <div class="container-fluid">
+            <button id="themeButton" onclick="setTheme()" type="button" class="btn btn-outline-primary theme">
+                <i class="fas fa-moon fa-lg fa-fw"></i></button>
+
+        </div>
+        <h1>What's The Weather</h1>
+        <div id = "inputBox" class="input-group mb-3 mt-5">
+            <input id = "searchBox" type="text" class="form-control form-control-lg" placeholder="Type a city name">
+            <button type="button" class="btn btn-outline-success searchb" id = "button-addon2" onclick="getWeatherReport()"><i class = "fas fa-search fa-lg fa-fw"></i></button>
+        </div>
+        <div class="card weather-card report">
+            <div class="card-title text-center mt-3">
+                <h4 id = "city">Delhi</h4>
+                <h6 id = "date"> Fri (Feb) 17, 2023</h6>
+            </div>
+            <img id = "image" src="/images/clouds.jpg" class="card-img-top" alt="weather image">
+            
+            <div id = "cbody" class="card-body">
+                <h6 id = "temp" class = "display-4 font-weight-bold text-center"> 13°C </h6>
+                <h6 id = "feel" class="display-7 font-weight-bold text-center"> ( Feels like 13°C) </h6>
+                <h6 id = "weather" class="display-7 text-center" > Haze </h6>
+                <h5 id = "minmaxTemp" class="text-center"> 25°C(min) / 26°C(max) </h5>
+
+            </div>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                      More Information
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul class = "list-group">
+                            <li id = "humidity" class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Humidity</span> 53
+                            </li>
+                            <li id = "pressure" class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Pressure</span> 1018
+                            </li>
+                            <li id = "visibility" class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Visibility</span> 2100
+                            </li>
+                            <li id = "windspeed" class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Wind Speed</span> 2000
+                            </li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha1/js/bootstrap.min.js" integrity="sha512-eHx4nbBTkIr2i0m9SANm/cczPESd0DUEcfl84JpIuutE6oDxPhXvskMR08Wmvmfx5wUpVjlWdi82G5YLvqqJdA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js" integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src = "/js/weather_script.js"></script>
+</body>
+</html>
