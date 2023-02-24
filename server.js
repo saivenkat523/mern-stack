@@ -72,18 +72,18 @@ app.delete(("/api/todos/:todoid"),function(req,res){
 });
 
 app.get("/resume", function(req, res){
-	res.sendFile(__dirname+"/resume.html");
+	res.sendFile(process.cwd()+"/resume.html");
 });
 
 app.get("/1", function(req, res){
-	res.sendFile(__dirname+"/frontend/html/1.html");
+	res.sendFile(process.cwd()+"/frontend/html/1.html");
 });
 
 app.get("/card", function(req, res){
-	res.sendFile(__dirname+"/card.html");
+	res.sendFile(process.cwd()+"/card.html");
 });
 app.get("/weather", function(req, res){
-	res.sendFile(__dirname+"/frontend/html/weather.html");
+	res.sendFile(process.cwd()+"/frontend/html/weather.html");
 });
 // app.get("/todolist", function(req, res){
 // 	res.sendFile(__dirname+"/frontend/html/todolist.html");
