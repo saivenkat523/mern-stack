@@ -1,5 +1,7 @@
-const { default: mongoose } = require("mongoose");
-const todoModel = require("../models/todoModel");
+// const { default: mongoose } = require("mongoose");
+import mongoose from "mongoose";
+// const todoModel = require("../models/todoModel");
+import {todoModel} from "../models/todoModel.js";
 
 /*
 1. createTodo
@@ -10,7 +12,7 @@ const todoModel = require("../models/todoModel");
 6. DeleteTodoById
 */
 
-module.exports.createTodo = async function(todo,callback){
+export const createTodo = async function(todo,callback){
     try{
         var newTodo = new todoModel(todo);
         var result = await newTodo.save();
@@ -20,7 +22,7 @@ module.exports.createTodo = async function(todo,callback){
         callback(err,null);
     }
 }
-module.exports.getAllTodos = async function(callback){
+export const getAllTodos = async function(callback){
     try{
         var todos = await todoModel.find({isCompleted: false,isDeleted: false});
         callback(null,todos);
@@ -30,7 +32,7 @@ module.exports.getAllTodos = async function(callback){
     }
 }
 
-module.exports.getTodosByQuery = async function(query,callback){
+export const getTodosByQuery = async function(query,callback){
     try{
         var todos = await todoModel.find(query);
         callback(null,todos);
@@ -40,7 +42,7 @@ module.exports.getTodosByQuery = async function(query,callback){
     }
 }
 
-module.exports.getSingleTodoById = async function(id,callback){
+export const getSingleTodoById = async function(id,callback){
     try{
         var todo = await todoModel.findOne(id);
         callback(null,todo);
@@ -50,7 +52,7 @@ module.exports.getSingleTodoById = async function(id,callback){
     }
 }
 
-module.exports.updateTodoById = async function(id,data,callback){
+export const updateTodoById = async function(id,data,callback){
     try{
         var todo = {
             _id: new mongoose.Types.ObjectId(id),
@@ -63,7 +65,7 @@ module.exports.updateTodoById = async function(id,data,callback){
     }
 }
 
-module.exports.deleteTodoById = async function(id,callback){
+export const deleteTodoById = async function(id,callback){
     try{
         var todo = {
             _id: id,

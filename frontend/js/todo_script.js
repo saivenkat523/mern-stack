@@ -59,7 +59,7 @@ async function getAllCompletedTodos() {
             completedTodosList.appendChild(listItem);
         })
 
-
+        
     } catch (err) {
         console.log(err);
     }
